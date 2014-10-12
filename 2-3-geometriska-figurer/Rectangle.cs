@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace _2_3_geometriska_figurer
 {
-    class Ellipse : Shape
+    class Rectangle : Shape
     {
         #region Properties
 
         /// <summary>
-        /// Publik egenskapen av typen double som ska ge en ellips area.
+        /// Publik egenskapen av typen double som ska ge en rektangels area.
         /// </summary>
         public override double Area
         {
@@ -19,7 +19,7 @@ namespace _2_3_geometriska_figurer
         }
 
         /// <summary>
-        /// Publik egenskapen av typen double som ska ge en ellips omkrets.
+        /// Publik egenskapen av typen double som ska ge en rektangels omkrets.
         /// </summary>
         public override double Perimeter
         {
@@ -30,13 +30,8 @@ namespace _2_3_geometriska_figurer
 
         #region Constructor
 
-        /// <summary>
-        /// Publik konstruktor som genom anrop av basklassens konstruktor 
-        /// ser till att det nya objektets längd och bredd sätts.
-        /// </summary>
-        /// <param name="length"></param>
-        /// <param name="width"></param>
-        public Ellipse(double length, double width) : base(length, width)
+
+        public Rectangle(double length, double width) : base(length, width)
         {
             throw new NotImplementedException();
         }
