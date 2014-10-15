@@ -27,6 +27,7 @@ namespace _2_3_geometriska_figurer
             Ellipse test2 = new Ellipse(1, 3);
             Ellipse test3 = new Ellipse(10, 300);
 
+            Console.WriteLine("{0}{1, 10:G3}{2, 10:G3}{3, 10:G3}{4, 10:G3}", "Figur".PadRight(10), "Längd", "Bredd", "Omkrets", "Area");
             Console.WriteLine(test.ToString());
             Console.WriteLine(test2.ToString());
             Console.WriteLine(test1.ToString());
