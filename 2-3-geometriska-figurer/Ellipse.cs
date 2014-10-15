@@ -15,7 +15,7 @@ namespace _2_3_geometriska_figurer
         /// </summary>
         public override double Area
         {
-            get { return 0; }
+            get { return Math.PI * (Length / 2 ) * (Width / 2); }
         }
 
         /// <summary>
@@ -23,7 +23,7 @@ namespace _2_3_geometriska_figurer
         /// </summary>
         public override double Perimeter
         {
-            get { return 0; }
+            get { return Math.PI * Math.Sqrt(2 * (Length / 2) * (Length / 2) + (Width / 2) * (Width / 2)); }
         }
 
         #endregion
@@ -34,11 +34,12 @@ namespace _2_3_geometriska_figurer
         /// Publik konstruktor som genom anrop av basklassens konstruktor 
         /// ser till att det nya objektets längd och bredd sätts.
         /// </summary>
-        /// <param name="length"></param>
-        /// <param name="width"></param>
+        /// <param name="length">Längden på ellipsen</param>
+        /// <param name="width">Bredden på ellipsen</param>
         public Ellipse(double length, double width) : base(length, width)
         {
-            throw new NotImplementedException();
+            Length = length;
+            Width = width;
         }
 
         #endregion

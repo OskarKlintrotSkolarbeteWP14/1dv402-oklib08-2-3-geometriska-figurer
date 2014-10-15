@@ -15,7 +15,7 @@ namespace _2_3_geometriska_figurer
         /// </summary>
         public override double Area
         {
-            get { return 0; }
+            get { return Length * Width; }
         }
 
         /// <summary>
@@ -23,17 +23,23 @@ namespace _2_3_geometriska_figurer
         /// </summary>
         public override double Perimeter
         {
-            get { return 0; }
+            get { return 2 * Length + 2 * Width; }
         }
 
         #endregion
 
         #region Constructor
 
-
+        /// <summary>
+        /// Publik konstruktor som genom anrop av basklassens konstruktor ser till
+        /// att det nya objektets längd och bredd sätts.
+        /// </summary>
+        /// <param name="length">Rektangelns längd</param>
+        /// <param name="width">Rektangelns bredd</param>
         public Rectangle(double length, double width) : base(length, width)
         {
-            throw new NotImplementedException();
+            Length = length;
+            Width = width;
         }
 
         #endregion
