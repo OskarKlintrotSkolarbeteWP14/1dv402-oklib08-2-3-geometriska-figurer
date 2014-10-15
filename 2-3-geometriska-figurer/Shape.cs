@@ -130,7 +130,8 @@ namespace _2_3_geometriska_figurer
         /// <returns></returns>
         public override string ToString()
         {
-            throw new NotImplementedException();
+            return String.Format("{0}{1, 10:G3}{2, 10:G3}{3, 10:G3}{4, 10:G3}", GetType().Name.PadRight(10), Length, Width, Perimeter, Area);
+            //return String.Format(GetType().Name + " " + Length + " " + Width + " " + Perimeter + " " + Area);
         }
 
         #endregion
