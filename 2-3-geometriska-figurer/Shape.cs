@@ -35,7 +35,20 @@ namespace _2_3_geometriska_figurer
         /// set-metoden ska validera värdet som tilldelas egenskapen. Är värdet inte 
         /// större än 0 ska ett undantag av typen ArgumentException kastas.
         /// </summary>
-        public double Length { get; set; }
+        public double Length
+        {
+
+            get { return _lenght; }
+
+            set
+            {
+                if (value < 1)
+                {
+                    throw new ArgumentException(String.Format(Error.Error_Lenght, value));
+                }
+                _lenght = value;
+            }
+        }
 
         /// <summary>
         /// Publik abstrakt egenskap av typen double representerande en figurs omkrets.
@@ -48,7 +61,19 @@ namespace _2_3_geometriska_figurer
         /// set-metoden ska validera värdet som tilldelas egenskapen. Är värdet inte 
         /// större än 0 ska ett undantag av typen ArgumentException kastas.
         /// </summary>
-        public double Width { get; set; }
+        public double Width {
+
+            get { return _width; }
+
+            set
+            {
+                if (value < 1)
+                {
+                    throw new ArgumentException(String.Format(Error.Error_Width, value));
+                }
+                _width = value;
+            } 
+        }
 
         #endregion
 

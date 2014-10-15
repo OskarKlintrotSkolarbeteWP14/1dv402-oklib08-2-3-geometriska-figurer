@@ -42,6 +42,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Ellipse.cs" />
+    <Compile Include="Error.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Error.resx</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rectangle.cs" />
@@ -50,6 +55,12 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="ClassDiagram1.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Error.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Error.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
