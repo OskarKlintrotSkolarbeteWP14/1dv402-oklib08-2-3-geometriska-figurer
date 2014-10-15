@@ -22,6 +22,15 @@ namespace _2_3_geometriska_figurer
         /// <param name="args"></param>
         static void Main(string[] args)
         {
+            Rectangle test = new Rectangle(1, 3);
+            Rectangle test1 = new Rectangle(2.3, 3.5);
+            Ellipse test2 = new Ellipse(1, 3);
+            Ellipse test3 = new Ellipse(10, 300);
+
+            Console.WriteLine(test.ToString());
+            Console.WriteLine(test2.ToString());
+            Console.WriteLine(test1.ToString());
+            Console.WriteLine(test3.ToString());
 
         }
 
