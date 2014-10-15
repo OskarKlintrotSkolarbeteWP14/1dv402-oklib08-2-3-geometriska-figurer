@@ -36,11 +36,7 @@ namespace _2_3_geometriska_figurer
         /// </summary>
         /// <param name="length">Längden på ellipsen</param>
         /// <param name="width">Bredden på ellipsen</param>
-        public Ellipse(double length, double width) : base(length, width)
-        {
-            Length = length;
-            Width = width;
-        }
+        public Ellipse(double length, double width) : base(length, width) { }
 
         #endregion
     }

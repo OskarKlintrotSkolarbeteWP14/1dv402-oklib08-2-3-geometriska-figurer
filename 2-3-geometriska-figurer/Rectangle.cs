@@ -36,11 +36,7 @@ namespace _2_3_geometriska_figurer
         /// </summary>
         /// <param name="length">Rektangelns längd</param>
         /// <param name="width">Rektangelns bredd</param>
-        public Rectangle(double length, double width) : base(length, width)
-        {
-            Length = length;
-            Width = width;
-        }
+        public Rectangle(double length, double width) : base(length, width) { }
 
         #endregion
     }
