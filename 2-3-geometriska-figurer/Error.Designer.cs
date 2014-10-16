@@ -61,6 +61,15 @@ namespace _2_3_geometriska_figurer {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Objektet är inte av typen Shape..
+        /// </summary>
+        internal static string Error_Comp {
+            get {
+                return ResourceManager.GetString("Error_Comp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Längden ska vara mer än 0, vilket {0} inte är!.
         /// </summary>
         internal static string Error_Lenght {

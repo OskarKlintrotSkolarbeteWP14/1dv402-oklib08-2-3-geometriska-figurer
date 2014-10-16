@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _2_3_geometriska_figurer
 {
-    abstract class Shape
+    abstract class Shape : IComparable
     {
         #region Fields
 
@@ -116,7 +116,42 @@ namespace _2_3_geometriska_figurer
         /// <returns></returns>
         public int CompareTo(object obj)
         {
-            throw new NotImplementedException();
+            // • Refererar parametern till null ska ett heltal större än 0 returneras.
+            if (obj == null)
+            {
+                return 1;
+            }
+
+            // • Refererar parametern till ett objekt som inte är av typen Shape ska ett 
+            //   undantag av typen ArgumentException kastas. 
+            Shape other = obj as Shape;
+            if (other == null)
+            {
+                throw new ArgumentException(Error.Error_Comp);
+            }
+
+            // • Refererar parametern till ett objekt vars area är större än det anropande 
+            //   objektet ska ett heltal mindre än 0 returneras.
+
+            if (other.Area > this.Area)
+            {
+                return -1;
+            }
+
+            // • Refererar parametern till ett objekt vars area är mindre än det anropande 
+            //   objektet ska ett heltal större än 0 returneras.
+            else if (other.Area < this.Area)
+            {
+                return 1;
+            }
+                   
+            // • Refererar parametern till ett objekt vars area är lika med det anropande 
+            //   objektet ska heltalet 0 returneras.
+            else if (other.Area == this.Area)
+            {
+                return 0;
+            }
+            return 0;
         }
 
         /// <summary>

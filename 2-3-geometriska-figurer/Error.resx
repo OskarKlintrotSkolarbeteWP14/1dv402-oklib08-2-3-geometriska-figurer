@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Error_Comp" xml:space="preserve">
+    <value>Objektet är inte av typen Shape.</value>
+  </data>
   <data name="Error_Lenght" xml:space="preserve">
     <value>Längden ska vara mer än 0, vilket {0} inte är!</value>
   </data>

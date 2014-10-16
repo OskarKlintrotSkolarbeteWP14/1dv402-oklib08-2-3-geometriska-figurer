@@ -27,6 +27,7 @@
       <HashCode>AAAAAAAAAQAAAAQEAAAAAEBAABBAAAAAAAAAAQAAAAA=</HashCode>
       <FileName>Shape.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Enum Name="_2_3_geometriska_figurer.ShapeType">
     <Position X="5.5" Y="2.75" Width="1.5" />
