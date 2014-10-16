@@ -49,9 +49,29 @@ namespace _2_3_geometriska_figurer
         /// en referens till.
         /// </summary>
         /// <returns></returns>
-        static Shape[] RandomizeShapes()
+        private static Shape[] RandomizeShapes()
         {
-            throw new NotImplementedException();
+            Random randomNumber = new Random();
+            int numberOfShapes = randomNumber.Next(5, 20);
+            Shape[] shapes = new Shape[numberOfShapes];
+
+            for (int i = 0; i < numberOfShapes; i++)
+            {
+                double lenght = randomNumber.Next(5, 100);
+                double width = randomNumber.Next(5, 100);
+                int typeOfShape = randomNumber.Next(0, 1);
+
+                switch ((ShapeType)typeOfShape)
+                {
+                    case ShapeType.Ellipse:
+                        shapes[i] = new Ellipse(lenght, width);
+                        break;
+                    case ShapeType.Rectangle:
+                        shapes[i] = new Rectangle(lenght, width);
+                        break;
+                }
+            }
+            return shapes;
         }
 
         /// <summary>
