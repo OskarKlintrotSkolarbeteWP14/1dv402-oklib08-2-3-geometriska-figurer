@@ -97,20 +97,6 @@ namespace _2_3_geometriska_figurer
 
         /// <summary>
         /// Metoden ska jämföra två objekt med avseende på deras areor. 
-        /// 
-        ///     • Refererar parametern till null ska ett heltal större än 0 returneras. 
-        ///     
-        ///     • Refererar parametern till ett objekt som inte är av typen Shape ska ett 
-        ///       undantag av typen ArgumentException kastas. 
-        ///       
-        ///     • Refererar parametern till ett objekt vars area är större än det anropande 
-        ///       objektet ska ett heltal mindre än 0 returneras. 
-        ///       
-        ///     • Refererar parametern till ett objekt vars area är mindre än det anropande 
-        ///       objektet ska ett heltal större än 0 returneras.
-        ///       
-        ///     • Refererar parametern till ett objekt vars area är lika med det anropande 
-        ///       objektet ska heltalet 0 returneras.
         /// </summary>
         /// <param name="obj"></param>
         /// <returns></returns>
