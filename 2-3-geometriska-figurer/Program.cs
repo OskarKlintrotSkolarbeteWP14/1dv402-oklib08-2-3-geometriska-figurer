@@ -22,6 +22,12 @@ namespace _2_3_geometriska_figurer
         /// <param name="args"></param>
         static void Main(string[] args)
         {
+            Shape[] ShapeArray = RandomizeShapes();
+
+            Array.Sort(ShapeArray);
+
+            ViewShapes(ShapeArray);
+
             //Rectangle test = new Rectangle(1, 3);
             //Rectangle test1 = new Rectangle(2.3, 3.5);
             //Ellipse test2 = new Ellipse(1, 3);
@@ -59,7 +65,7 @@ namespace _2_3_geometriska_figurer
             {
                 double lenght = randomNumber.Next(5, 100);
                 double width = randomNumber.Next(5, 100);
-                int typeOfShape = randomNumber.Next(0, 1);
+                int typeOfShape = randomNumber.Next(0, 2);
 
                 switch ((ShapeType)typeOfShape)
                 {
@@ -83,7 +89,11 @@ namespace _2_3_geometriska_figurer
         /// <param name="shapes"></param>
         static void ViewShapes(Shape[] shapes)
         {
-            throw new NotImplementedException();
+            Console.WriteLine("{0}{1, 10}{2, 10}{3, 10}{4, 10}", "Figur".PadRight(10), "Längd", "Bredd", "Omkrets", "Area");
+            foreach (Shape item in shapes)
+            {
+                Console.WriteLine(item.ToString());
+            }
         }
 
 
