@@ -22,23 +22,19 @@ namespace _2_3_geometriska_figurer
         /// <param name="args"></param>
         static void Main(string[] args)
         {
-            Shape[] ShapeArray = RandomizeShapes();
+            ConsoleKeyInfo escp;
 
-            Array.Sort(ShapeArray);
+            do
+            {
+                Shape[] ShapeArray = RandomizeShapes();
 
-            ViewShapes(ShapeArray);
+                Array.Sort(ShapeArray);
 
-            //Rectangle test = new Rectangle(1, 3);
-            //Rectangle test1 = new Rectangle(2.3, 3.5);
-            //Ellipse test2 = new Ellipse(1, 3);
-            //Ellipse test3 = new Ellipse(10, 300);
+                ViewShapes(ShapeArray);
 
-            //Console.WriteLine("{0}{1, 10}{2, 10}{3, 10}{4, 10}", "Figur".PadRight(10), "Längd", "Bredd", "Omkrets", "Area");
-            //Console.WriteLine(test.ToString());
-            //Console.WriteLine(test2.ToString());
-            //Console.WriteLine(test1.ToString());
-            //Console.WriteLine(test3.ToString());
-
+                Console.WriteLine("Tryck esc för att avsluta, annan tangent för att försöka igen.");
+                escp = Console.ReadKey(); 
+            } while (escp.Key != ConsoleKey.Escape);
         }
 
         /// <summary>
@@ -89,6 +85,7 @@ namespace _2_3_geometriska_figurer
         /// <param name="shapes"></param>
         static void ViewShapes(Shape[] shapes)
         {
+            Console.Clear();
             Console.WriteLine("{0}{1, 10}{2, 10}{3, 10}{4, 10}", "Figur".PadRight(10), "Längd", "Bredd", "Omkrets", "Area");
             foreach (Shape item in shapes)
             {
