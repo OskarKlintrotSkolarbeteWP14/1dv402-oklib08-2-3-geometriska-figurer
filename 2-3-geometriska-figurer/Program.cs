@@ -56,11 +56,13 @@ namespace _2_3_geometriska_figurer
             Random randomNumber = new Random();
             int numberOfShapes = randomNumber.Next(5, 20);
             Shape[] shapes = new Shape[numberOfShapes];
+            int maximum = 99;
+            int minimum = 5;
 
             for (int i = 0; i < numberOfShapes; i++)
             {
-                double lenght = randomNumber.Next(5, 100);
-                double width = randomNumber.Next(5, 100);
+                double lenght = randomNumber.NextDouble() * (maximum - minimum) + minimum;
+                double width = randomNumber.NextDouble() * (maximum - minimum) + minimum;
                 int typeOfShape = randomNumber.Next(0, 2);
 
                 switch ((ShapeType)typeOfShape)
