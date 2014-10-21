@@ -118,26 +118,11 @@ namespace _2_3_geometriska_figurer
 
             // • Refererar parametern till ett objekt vars area är större än det anropande 
             //   objektet ska ett heltal mindre än 0 returneras.
-
-            if (other.Area > this.Area)
-            {
-                return -1;
-            }
-
             // • Refererar parametern till ett objekt vars area är mindre än det anropande 
             //   objektet ska ett heltal större än 0 returneras.
-            else if (other.Area < this.Area)
-            {
-                return 1;
-            }
-                   
             // • Refererar parametern till ett objekt vars area är lika med det anropande 
             //   objektet ska heltalet 0 returneras.
-            else if (other.Area == this.Area)
-            {
-                return 0;
-            }
-            return 0;
+            return this.Area.CompareTo(other.Area);
         }
 
         /// <summary>
